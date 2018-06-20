@@ -2,6 +2,10 @@ Rails/SafeNavigation:
   Description: Converts usages of try! or try to &..
   ConvertTry: true
 
+Rails/SkipsModelValidations:
+  Exclude:
+    - 'db/migrate/*'
+
 Rails/UnknownEnv:
   Environments:
     - development
