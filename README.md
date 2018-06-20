@@ -26,3 +26,7 @@
   line break.
 * Tags indicate that an action is necessary after the commit is deployed or
   checked out locally. We have the following conventions.
+
+## Resources
+
+* [Rubocop HQ Defaults](https://github.com/rubocop-hq/rubocop/blob/master/config/default.yml)
