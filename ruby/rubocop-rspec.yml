@@ -34,6 +34,10 @@ RSpec/ImplicitExpect:
   - should
   StyleGuide: http://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/ImplicitExpect
 
+RSpec/LetSetup:
+  Description: Checks unreferenced let! calls being used for test setup.
+  Enabled: false
+
 RSpec/MessageSpies:
   Description: Checks that message expectations are set using spies.
   Enabled: true
@@ -48,7 +52,3 @@ RSpec/NestedGroups:
   Enabled: true
   Max: 6
   StyleGuide: http://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/NestedGroups
-
-RSpec/LetSetup:
-  Description: Checks unreferenced let! calls being used for test setup.
-  Enabled: false
