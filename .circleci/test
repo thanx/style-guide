@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+
+Dir.glob('**/rubocop.yml').each do |path|
+  config = YAML.load_file(path)
+  next if config.keys == config.keys.sort
+  raise "#{path} config is not alphabetically sorted"
+end
