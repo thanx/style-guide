@@ -1,3 +1,11 @@
 Rails/SafeNavigation:
   Description: Converts usages of try! or try to &..
   ConvertTry: true
+
+Rails/UnknownEnv:
+  Environments:
+    - development
+    - test
+    - production
+    - staging
+    - demo
