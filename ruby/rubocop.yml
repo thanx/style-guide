@@ -261,6 +261,10 @@ Style/ClassAndModuleChildren:
     - nested
     - compact
 
+# Allow empty condition in case statements
+Style/EmptyCaseCondition:
+  Enabled: false
+
 Style/MultilineMemoization:
   EnforcedStyle: braces
   SupportedStyles:
