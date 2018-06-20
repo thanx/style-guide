@@ -261,6 +261,12 @@ Style/ClassAndModuleChildren:
     - nested
     - compact
 
+Style/MultilineMemoization:
+  EnforcedStyle: braces
+  SupportedStyles:
+    - keyword
+    - braces
+
 Style/StringLiterals:
   EnforcedStyle: single_quotes
   SupportedStyles:
