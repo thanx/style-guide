@@ -150,6 +150,14 @@ Layout/MultilineMethodCallIndentation:
   # But it can be overridden by setting this parameter
   IndentationWidth: ~
 
+# Checks that the equals signs in parameter default assignments have or don't
+# have surrounding space depending on configuration.
+Layout/SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: no_space
+  SupportedStyles:
+    - space
+    - no_space
+
 #################### Style ###########################
 
 Style/BlockDelimiters:
