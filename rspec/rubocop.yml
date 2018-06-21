@@ -1,3 +1,8 @@
+RSpec/ContextWording:
+  Description: `context` block descriptions should start with 'when', or 'with'.
+  Enabled: false
+  StyleGuide: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/ContextWording
+
 RSpec/ExampleLength:
   Description: Checks for long examples.
   Enabled: true
