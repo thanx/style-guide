@@ -344,7 +344,7 @@ Metrics/LineLength:
   IgnoredPatterns: []
   Exclude:
     - 'db/migrate/*'
-    - 'config/*'
+    - 'config/**/*'
 
 Metrics/MethodLength:
   CountComments: false  # count full line comments?
