@@ -16,6 +16,15 @@ RSpec/ExampleLength:
   Max: 10
   StyleGuide: http://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/ExampleLength
 
+RSpec/ExpectChange:
+  Description: Checks for consistent style of change matcher.
+  Enabled: true
+  EnforcedStyle: block
+  SupportedStyles:
+  - method_call
+  - block
+  StyleGuide: http://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/ExpectChange
+
 RSpec/MessageSpies:
   Description: Checks that message expectations are set using spies.
   Enabled: true
