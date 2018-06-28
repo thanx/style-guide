@@ -16,6 +16,15 @@ RSpec/ExampleLength:
   Max: 10
   StyleGuide: http://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/ExampleLength
 
+RSpec/MessageSpies:
+  Description: Checks that message expectations are set using spies.
+  Enabled: true
+  EnforcedStyle: receive
+  SupportedStyles:
+  - have_received
+  - receive
+  StyleGuide: http://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/MessageSpies
+
 RSpec/NestedGroups:
   Description: Checks for nested example groups.
   Enabled: true
