@@ -158,6 +158,25 @@ Layout/SpaceAroundEqualsInParameterDefault:
     - space
     - no_space
 
+#################### Naming ##########################
+
+Naming/UncommunicativeMethodParamName:
+  # Parameter names may be equal to or greater than this value
+  MinNameLength: 3
+  AllowNamesEndingInNumbers: true
+  # Whitelisted names that will not register an offense
+  AllowedNames:
+    - io
+    - id
+    - to
+    - by
+    - 'on'
+    - in
+    - at
+    - _
+  # Blacklisted names that will register an offense
+  ForbiddenNames: []
+
 #################### Style ###########################
 
 Style/BlockDelimiters:
