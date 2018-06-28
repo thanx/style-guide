@@ -323,7 +323,11 @@ Metrics/AbcSize:
 Metrics/BlockLength:
   CountComments: false  # count full line comments?
   Max: 25
-  ExcludedMethods: []
+  ExcludedMethods:
+    - aasm              # AAM
+    - factory           # FactoryBot factory
+    - resource          # Grape resource
+    - FactoryBot.define # FactoryBot define
   Exclude:
     - '**/*_spec.rb'
 
