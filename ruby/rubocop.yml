@@ -383,6 +383,9 @@ Metrics/MethodLength:
   Exclude:
     - 'db/migrate/*'
 
+Metrics/PerceivedComplexity:
+  Max: 10
+
 #################### Lint ##################################
 
 Lint/AmbiguousBlockAssociation:
