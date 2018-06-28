@@ -376,6 +376,12 @@ Metrics/MethodLength:
   Exclude:
     - 'db/migrate/*'
 
+#################### Lint ##################################
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*"
+
 #################### Bundler ###############################
 
 Bundler/OrderedGems:
