@@ -29,6 +29,7 @@
 
 ## Resources
 
-* [Rubocop HQ Defaults](https://github.com/rubocop-hq/rubocop/blob/master/config/default.yml)
 * [Rubocop Docs](http://rubocop.readthedocs.io/en/latest/)
 * [RSpec Cops](http://rubocop-rspec.readthedocs.io/en/latest/cops_rspec/)
+* [Ruby Defaults](https://github.com/rubocop-hq/rubocop/blob/master/config/default.yml)
+* [RSpec Defaults](https://github.com/rubocop-hq/rubocop-rspec/blob/master/config/default.yml)
