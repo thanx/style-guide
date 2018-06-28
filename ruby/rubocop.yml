@@ -387,7 +387,7 @@ Metrics/LineLength:
 
 Metrics/MethodLength:
   CountComments: false  # count full line comments?
-  Max: 10
+  Max: 20
   Exclude:
     - 'db/migrate/*'
 
