@@ -13,7 +13,7 @@ RSpec/DescribeClass:
 RSpec/ExampleLength:
   Description: Checks for long examples.
   Enabled: true
-  Max: 10
+  Max: 20
   StyleGuide: http://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/ExampleLength
 
 RSpec/ExpectChange:
