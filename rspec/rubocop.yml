@@ -3,6 +3,13 @@ RSpec/ContextWording:
   Enabled: false
   StyleGuide: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/ContextWording
 
+RSpec/DescribeClass:
+  Description: Check that the first argument to the top level describe is a constant.
+  Enabled: true
+  StyleGuide: http://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/DescribeClass
+  Exclude:
+    - 'spec/requests/**/*'
+
 RSpec/ExampleLength:
   Description: Checks for long examples.
   Enabled: true
