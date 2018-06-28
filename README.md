@@ -26,6 +26,7 @@
   line break.
 * Tags indicate that an action is necessary after the commit is deployed or
   checked out locally. We have the following conventions.
+* [More on Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 
 ## Resources
 
