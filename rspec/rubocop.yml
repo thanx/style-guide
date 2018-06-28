@@ -25,6 +25,15 @@ RSpec/ExpectChange:
   - block
   StyleGuide: http://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/ExpectChange
 
+RSpec/ImplicitExpect:
+  Description: Check that a consistent implicit expectation style is used.
+  Enabled: true
+  EnforcedStyle: should
+  SupportedStyles:
+  - is_expected
+  - should
+  StyleGuide: http://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/ImplicitExpect
+
 RSpec/MessageSpies:
   Description: Checks that message expectations are set using spies.
   Enabled: true
