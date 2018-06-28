@@ -357,6 +357,10 @@ Metrics/BlockLength:
   Exclude:
     - '**/*_spec.rb'
 
+# Avoid complex methods.
+Metrics/CyclomaticComplexity:
+  Max: 10
+
 Metrics/LineLength:
   Max: 80
   # To make it possible to copy or click on URIs in the code, we allow lines
