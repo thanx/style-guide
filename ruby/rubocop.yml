@@ -293,6 +293,13 @@ Style/ClassAndModuleChildren:
 Style/EmptyCaseCondition:
   Enabled: false
 
+# `MinBodyLength` defines the number of lines of the a body of an `if` or
+# `unless` needs to have to trigger this cop
+Style/GuardClause:
+  MinBodyLength: 1
+  Exclude:
+    - 'db/migrate/*'
+
 Style/MultilineMemoization:
   EnforcedStyle: braces
   SupportedStyles:
