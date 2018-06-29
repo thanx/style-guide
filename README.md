@@ -28,6 +28,46 @@
   checked out locally. We have the following conventions.
 * [More on Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 
+## Ruby Linting
+
+All ruby linting is performed via
+[Rubocop](https://github.com/rubocop-hq/ruboco://github.com/rubocop-hq/rubocop).
+
+Install
+
+    # Gemfile
+    gem 'rubocop'
+    gem 'rubocop-rspec'
+
+    $ bundle
+
+Configure
+
+    # .rubocop.yml
+    AllCops:
+      TargetRailsVersion: 5.1.4
+      TargetRubyVersion: 2.5.0
+      DefaultFormatter: progress
+      DisplayCopNames: true
+      ExtraDetails: true
+
+    Rails:
+      Enabled: true
+
+    require: rubocop-rspec
+
+    inherit_from:
+      - https://raw.githubusercontent.com/thanx/style-guide/master/ruby/rubocop.yml
+      - https://raw.githubusercontent.com/thanx/style-guide/master/rspec/rubocop.yml
+      - https://raw.githubusercontent.com/thanx/style-guide/master/rails/rubocop.yml
+
+    Documentation:
+      Enabled: false
+
+Lint
+
+    $ rubocop
+
 ## Resources
 
 * [Rubocop Docs](http://rubocop.readthedocs.io/en/latest/)
