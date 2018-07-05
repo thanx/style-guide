@@ -71,11 +71,25 @@ jobs:
           name: Lint
           command: bundle exec rubocop
 
+  test:
+    docker:
+      - *docker_ruby
+    steps:
+      - *restore_repo
+      - *restore_gems
+      - *install_gems
+      - run:
+          name: Test
+          command: bundle exec rspec
+
 workflows:
   version: 2
   build-lint:
     jobs:
       - build
       - lint:
+          requires:
+            - build
+      - test:
           requires:
             - build
