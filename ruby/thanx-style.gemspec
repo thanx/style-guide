@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/thanx/style-guide'
   s.license     = 'MIT'
 
-  s.files = Dir['lib/**/*', 'README.md']
+  s.files = Dir['lib/**/*', '.rubocop*.yml']
   s.require_paths = ['lib']
 
   s.add_dependency 'rubocop', '~> 0.57.2'
