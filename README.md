@@ -4,6 +4,8 @@
 
 * * *
 
+[![CircleCI](https://circleci.com/gh/thanx/style-guide.svg?style=svg)](https://circleci.com/gh/thanx/style-guide)
+
 ## General Style
 
 * trailing whitespace should be pruned
