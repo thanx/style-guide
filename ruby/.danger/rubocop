@@ -1,0 +1,2 @@
+rubocop_junit_parser.results_path = 'test-results/rubocop/results.xml'
+rubocop_junit_parser.process

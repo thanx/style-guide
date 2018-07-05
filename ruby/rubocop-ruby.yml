@@ -370,6 +370,7 @@ Metrics/BlockLength:
     - FactoryBot.define # FactoryBot define
   Exclude:
     - '**/*_spec.rb'
+    - '**/*.gemspec'
 
 Metrics/ClassLength:
   CountComments: false  # count full line comments?

@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+system <<~COMMAND
+  bundle exec rspec \
+    --color \
+    --require spec_helper \
+    --format progress \
+    --format RspecJunitFormatter \
+    --out test-results/rspec/results.xml \
+    #{ARGV.join(' ')}
+COMMAND

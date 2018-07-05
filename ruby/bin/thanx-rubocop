@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require 'bundler'
+Bundler.require
+
+gempath = Bundler.load.specs['rubocop-junit-formatter'].first.full_gem_path
+formatter = "#{gempath}/lib/rubocop/formatter/junit_formatter.rb"
+
+system <<~COMMAND
+  bundle exec rubocop \
+    --require #{formatter} \
+    --format RuboCop::Formatter::JUnitFormatter \
+    --out test-results/rubocop/results.xml \
+    --format progress \
+    #{ARGV.join(' ')}
+COMMAND
