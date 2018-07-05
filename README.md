@@ -33,6 +33,9 @@
 All ruby linting is performed via
 [Rubocop](https://github.com/rubocop-hq/ruboco://github.com/rubocop-hq/rubocop).
 
+To add Thanx rubocop rules to any Ruby project, install the
+[thanx-style rubygem](https://rubygems.org/gems/thanx-style).
+
 Install
 
     # Gemfile
