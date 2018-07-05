@@ -1,0 +1,81 @@
+version: 2
+references:
+
+  ## Images
+
+  docker_ruby: &docker_ruby
+    image: circleci/ruby:2.5.0
+    environment:
+      BUNDLE_JOBS=3
+      BUNDLE_RETRY=3
+      BUNDLE_PATH=vendor/bundle
+
+  # Repo Cache
+
+  restore_repo: &restore_repo
+    restore_cache:
+      name: Restore Repo Cache
+      keys:
+        - v1-repo-{{ .Branch }}-{{ .Revision }}
+        - v1-repo-{{ .Branch }}
+        - v1-repo
+
+  cache_repo: &cache_repo
+    save_cache:
+      name: Save Repo Cache
+      key: v1-repo-{{ .Branch }}-{{ .Revision }}
+      paths:
+        - .
+
+  # Gem Cache
+
+  restore_gems: &restore_gems
+    restore_cache:
+      name: Restore Gemfile Cache
+      keys:
+        - v1-gems-{{ checksum "Gemfile.lock" }}
+        - v1-gems
+
+  install_gems: &install_gems
+    run:
+      name: Install Gemfile Dependencies
+      command: bundle install --path vendor/bundle
+
+  cache_gems: &cache_gems
+    save_cache:
+      name: Save Gemfile Cache
+      key: v1-gems-{{ checksum "Gemfile.lock" }}
+      paths:
+        - vendor/bundle
+
+jobs:
+  build:
+    docker:
+      - *docker_ruby
+    steps:
+      - *restore_repo
+      - checkout
+      - *cache_repo
+      - *restore_gems
+      - *install_gems
+      - *cache_gems
+
+  lint:
+    docker:
+      - *docker_ruby
+    steps:
+      - *restore_repo
+      - *restore_gems
+      - *install_gems
+      - run:
+          name: Lint
+          command: bundle exec rubocop
+
+workflows:
+  version: 2
+  build-lint:
+    jobs:
+      - build
+      - lint:
+          requires:
+            - build
