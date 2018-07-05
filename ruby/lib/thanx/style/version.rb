@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Thanx # rubocop:disable Style/ClassAndModuleChildren
-  class Style
-    VERSION = '0.0.5'
+  module Style
+    VERSION = '0.0.6'
   end
 end
