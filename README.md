@@ -36,33 +36,15 @@ All ruby linting is performed via
 Install
 
     # Gemfile
-    gem 'rubocop'
-    gem 'rubocop-rspec'
+    gem 'thanx-style'
 
     $ bundle
 
 Configure
 
     # .rubocop.yml
-    AllCops:
-      TargetRailsVersion: 5.1.4
-      TargetRubyVersion: 2.5.0
-      DefaultFormatter: progress
-      DisplayCopNames: true
-      ExtraDetails: true
-
-    Rails:
-      Enabled: true
-
-    require: rubocop-rspec
-
-    inherit_from:
-      - https://raw.githubusercontent.com/thanx/style-guide/master/ruby/rubocop.yml
-      - https://raw.githubusercontent.com/thanx/style-guide/master/rspec/rubocop.yml
-      - https://raw.githubusercontent.com/thanx/style-guide/master/rails/rubocop.yml
-
-    Documentation:
-      Enabled: false
+    inherit_gem:
+      thanx-style: rubocop.yml
 
 Lint
 
