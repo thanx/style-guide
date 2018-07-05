@@ -1,0 +1,25 @@
+AllCops:
+  TargetRailsVersion: 5.1.4
+  TargetRubyVersion: 2.5.0
+  Exclude:
+    - '**/vendor/**/*'
+    - '.git/**/*'
+    - 'db/schema.rb'
+    - '**/bin/**/*'
+
+  DefaultFormatter: progress
+  DisplayCopNames: true
+  ExtraDetails: true
+
+Rails:
+  Enabled: true
+
+require: rubocop-rspec
+
+inherit_from:
+  - .rubocop-ruby.yml
+  - .rubocop-rspec.yml
+  - .rubocop-rails.yml
+
+Documentation:
+  Enabled: false
