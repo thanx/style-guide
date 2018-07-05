@@ -17,9 +17,9 @@ Rails:
 require: rubocop-rspec
 
 inherit_from:
-  - .rubocop-ruby.yml
-  - .rubocop-rspec.yml
-  - .rubocop-rails.yml
+  - rubocop-ruby.yml
+  - rubocop-rspec.yml
+  - rubocop-rails.yml
 
 Documentation:
   Enabled: false

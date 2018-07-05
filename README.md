@@ -44,7 +44,7 @@ Configure
 
     # .rubocop.yml
     inherit_gem:
-      thanx-style: .rubocop.yml
+      thanx-style: rubocop.yml
 
 Lint
 
