@@ -397,7 +397,8 @@ Metrics/LineLength:
   IgnoredPatterns: []
   Exclude:
     - 'db/migrate/*'
-    - 'config/**/*'
+    - '**/config/**/*'
+    - 'spec/factories.rb'
 
 Metrics/MethodLength:
   CountComments: false  # count full line comments?
