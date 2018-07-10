@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.files = Dir['lib/**/*', 'rubocop*.yml']
   s.require_paths = ['lib']
 
-  s.add_dependency 'rubocop', '~> 0.57.2'
+  s.add_dependency 'rubocop', '~> 0.58.0'
   s.add_dependency 'rubocop-rspec', '~> 1.27.0'
 
   s.add_development_dependency 'bundler', '~> 1.16'
