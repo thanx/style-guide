@@ -1,10 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'bundler'
-Bundler.require
-
-gempath = Bundler.load.specs['rubocop-junit-formatter'].first.full_gem_path
-formatter = "#{gempath}/lib/rubocop/formatter/junit_formatter.rb"
+formatter = '$(bundle show rubocop-junit-formatter)'
+formatter += '/lib/rubocop/formatter/junit_formatter.rb'
 
 system <<~COMMAND
   bundle exec rubocop \

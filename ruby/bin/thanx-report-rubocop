@@ -1,9 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'bundler'
-Bundler.require
-
-gempath = Bundler.load.specs['thanx-style'].first.full_gem_path
-dangerfile = "#{gempath}/.danger/rubocop"
-
-system("bundle exec danger --dangerfile=#{dangerfile}")
+system <<~CMD
+  bundle exec danger --dangerfile=$(bundle show thanx-style)/.danger/rubocop
+CMD
