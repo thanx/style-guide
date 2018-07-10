@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/thanx/style-guide'
   s.license     = 'MIT'
 
-  s.files = Dir['lib/**/*', 'rubocop*.yml']
+  s.files = Dir['lib/**/*', 'rubocop*.yml', '.danger/*']
   s.require_paths = ['lib']
 
   s.bindir = 'bin'
