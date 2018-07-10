@@ -3,7 +3,7 @@
 formatter = '$(bundle show rubocop-junit-formatter)'
 formatter += '/lib/rubocop/formatter/junit_formatter.rb'
 
-system <<~COMMAND
+exit system <<~COMMAND
   bundle exec rubocop \
     --require #{formatter} \
     --format RuboCop::Formatter::JUnitFormatter \

@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-system <<~COMMAND
+exit system <<~COMMAND
   bundle exec rspec \
     --color \
     --require spec_helper \
