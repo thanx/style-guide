@@ -289,6 +289,20 @@ Style/ClassAndModuleChildren:
     - nested
     - compact
 
+Style/DoubleNegation:
+  # This cop checks for uses of double negation (!!) to convert something to a
+  # boolean value. As this is both cryptic and usually redundant, it should be
+  # avoided.
+  #
+  # Examples:
+  #
+  #   # bad
+  #   !!something
+  #
+  #   # good
+  #   !something.nil?
+  Enabled: false
+
 # Allow empty condition in case statements
 Style/EmptyCaseCondition:
   Enabled: false
