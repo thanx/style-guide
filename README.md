@@ -55,6 +55,47 @@ Lint
 
     $ rubocop
 
+#### Circle CI
+
+Environment
+
+    $DANGER_GITHUB_API_TOKEN
+
+Configuration
+
+    # .circleci/config.yml
+    lint:
+      docker:
+        - ...
+      steps:
+        - ...
+        - run:
+            name: Lint
+            command: bundle exec thanx-rubocop
+        - store_test_results:
+            path: test-results
+        - run:
+            name: Danger Report Rubocop Results
+            command: bundle exec thanx-report-rubocop
+            when: always
+
+    test:
+      docker:
+        - ...
+      steps:
+        - ...
+        - run:
+            name: Tests
+            command: bundle exec thanx-rspec
+        - store_test_results:
+            path: test-results
+        - store_artifacts:
+            path: coverage
+        - run:
+            name: Danger Report RSpec Results
+            command: bundle exec thanx-report-rspec
+            when: always
+
 ## Resources
 
 * [Rubocop Docs](http://rubocop.readthedocs.io/en/latest/)
