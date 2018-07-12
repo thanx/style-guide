@@ -6,6 +6,7 @@ AllCops:
     - '.git/**/*'
     - 'db/schema.rb'
     - '**/bin/**/*'
+    - 'node_modules/**/*'
 
   DefaultFormatter: progress
   DisplayCopNames: true
