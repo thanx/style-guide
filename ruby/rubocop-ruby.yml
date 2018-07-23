@@ -373,7 +373,7 @@ Metrics/BlockLength:
   CountComments: false  # count full line comments?
   Max: 25
   ExcludedMethods:
-    - aasm              # AAM
+    - aasm              # AASM
     - factory           # FactoryBot factory
     - resource          # Grape resource
     - FactoryBot.define # FactoryBot define
