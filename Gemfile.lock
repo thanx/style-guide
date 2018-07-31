@@ -7,7 +7,7 @@ PATH
       danger-rubocop_junit_parser (~> 0.0.1)
       danger-simplecov_json (~> 0.3.0)
       rspec_junit_formatter (~> 0.4.1)
-      rubocop (~> 0.58.1)
+      rubocop (~> 0.58.2)
       rubocop-junit-formatter (~> 0.1.4)
       rubocop-rspec (~> 1.27.0)
       simplecov (~> 0.16.1)
