@@ -3,6 +3,7 @@ AllCops:
   TargetRubyVersion: 2.5.0
   Exclude:
     - '**/vendor/**/*'
+    - '**/vendor/**/.*'
     - '.git/**/*'
     - 'db/schema.rb'
     - '**/bin/**/*'
