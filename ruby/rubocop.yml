@@ -5,7 +5,7 @@ AllCops:
     - '**/vendor/**/*'
     - '**/vendor/**/.*'
     - '.git/**/*'
-    - 'db/schema.rb'
+    - '**/schema.rb'
     - '**/bin/**/*'
     - 'node_modules/**/*'
 
