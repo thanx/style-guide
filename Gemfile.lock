@@ -1,7 +1,7 @@
 PATH
   remote: ruby
   specs:
-    thanx-style (0.0.19)
+    thanx-style (0.0.20)
       danger (~> 5.6.2)
       danger-junit (~> 0.7.4)
       danger-rubocop_junit_parser (~> 0.0.1)
@@ -56,7 +56,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday-http-cache (1.3.1)
       faraday (~> 0.8)
-    git (1.4.0)
+    git (1.5.0)
     jaro_winkler (1.5.1-x86_64-darwin-17)
     json (2.1.0)
     kramdown (1.17.0)
@@ -66,7 +66,7 @@ GEM
     no_proxy_fix (0.1.2)
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
-    octokit (4.9.0)
+    octokit (4.10.0)
       sawyer (~> 0.8.0, >= 0.5.3)
     open4 (1.3.4)
     ox (2.9.4)
@@ -74,7 +74,7 @@ GEM
     parser (2.5.1.2)
       ast (~> 2.4.0)
     powerpack (0.1.2)
-    public_suffix (3.0.2)
+    public_suffix (3.0.3)
     rainbow (3.0.0)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
@@ -128,4 +128,4 @@ DEPENDENCIES
   thanx-style!
 
 BUNDLED WITH
-   1.16.3
+   1.16.4
