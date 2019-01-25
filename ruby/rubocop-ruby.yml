@@ -318,6 +318,18 @@ Style/GuardClause:
   Exclude:
     - 'db/migrate/*'
 
+Style/Lambda:
+  Description: 'Use the new lambda literal syntax for single-line blocks.'
+  StyleGuide: '#lambda-multi-line'
+  Enabled: true
+  VersionAdded: '0.9'
+  VersionChanged: '0.40'
+  EnforcedStyle: literal
+  SupportedStyles:
+    - line_count_dependent
+    - lambda
+    - literal
+
 Style/MultilineMemoization:
   EnforcedStyle: braces
   SupportedStyles:
