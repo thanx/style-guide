@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Rebuilds and deploys the thanx-style gem
+
+rm *.gem
+gem build thanx-style.gemspec
+gem push *.gem
