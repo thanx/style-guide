@@ -12,4 +12,5 @@ Rails/UnknownEnv:
     - test
     - production
     - staging
+    - sandbox
     - demo
