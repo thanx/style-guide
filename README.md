@@ -6,6 +6,14 @@
 
 [![CircleCI](https://circleci.com/gh/thanx/style-guide.svg?style=svg)](https://circleci.com/gh/thanx/style-guide)
 
+### Owners
+For significant changes, pull requests should get approval from at least one of 
+the following before being merged.
+
+* @drn
+* @marcferna
+* millenniumiguana
+
 ## General Style
 
 * trailing whitespace should be pruned
