@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
   # pull request formatting
   s.add_dependency 'danger', '~> 5.6.2'
   s.add_dependency 'danger-junit', '~> 0.7.4'
-  s.add_dependency 'danger-rubocop_junit_parser', '~> 0.0.1'
+  s.add_dependency 'danger-rubocop_junit_parser', '~> 0.0.2'
   s.add_dependency 'danger-simplecov_json', '~> 0.3.0'
   # linting
   s.add_dependency 'rubocop', '~> 0.58.2'
