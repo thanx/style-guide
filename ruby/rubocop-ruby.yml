@@ -97,7 +97,7 @@ Layout/EndAlignment:
   Severity: warning
 
 # Checks the indentation of the first element in an array literal.
-Layout/IndentArray:
+Layout/IndentFirstArrayElement:
   # The value `special_inside_parentheses` means that array literals with
   # brackets that have their opening bracket on the same line as a surrounding
   # opening round parenthesis, shall have their first element indented relative
@@ -119,7 +119,7 @@ Layout/IndentArray:
   IndentationWidth: ~
 
 # Checks the indentation of the first key in a hash literal.
-Layout/IndentHash:
+Layout/IndentFirstHashElement:
   # The value `special_inside_parentheses` means that hash literals with braces
   # that have their opening brace on the same line as a surrounding opening
   # round parenthesis, shall have their first key indented relative to the

@@ -16,12 +16,14 @@ AllCops:
 Rails:
   Enabled: true
 
-require: rubocop-rspec
+require:
+  - rubocop-rspec
+  - rubocop-rails
 
 inherit_from:
   - rubocop-ruby.yml
   - rubocop-rspec.yml
   - rubocop-rails.yml
 
-Documentation:
+Style/Documentation:
   Enabled: false
