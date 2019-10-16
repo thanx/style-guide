@@ -36,9 +36,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'danger-rubocop_junit_parser', '~> 0.0.2'
   s.add_dependency 'danger-simplecov_json', '~> 0.3.0'
   # linting
-  s.add_dependency 'rubocop', '~> 0.58.2'
+  s.add_dependency 'rubocop', '~> 0.75'
   s.add_dependency 'rubocop-junit-formatter', '~> 0.1.4'
-  s.add_dependency 'rubocop-rspec', '~> 1.27.0'
+  s.add_dependency 'rubocop-rspec', '~> 1.36'
   # test formatting
   s.add_dependency 'rspec_junit_formatter', '~> 0.4.1'
   # code coverage
