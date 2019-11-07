@@ -38,8 +38,8 @@ Gem::Specification.new do |s|
   # linting
   s.add_dependency 'rubocop', '~> 0.75'
   s.add_dependency 'rubocop-junit-formatter', '~> 0.1.4'
-  s.add_dependency 'rubocop-rspec', '~> 1.36'
   s.add_dependency 'rubocop-rails', '~> 2.3.2'
+  s.add_dependency 'rubocop-rspec', '~> 1.36'
   # test formatting
   s.add_dependency 'rspec_junit_formatter', '~> 0.4.1'
   # code coverage
