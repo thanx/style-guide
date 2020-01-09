@@ -39,7 +39,9 @@ references:
   install_gems: &install_gems
     run:
       name: Install Gemfile Dependencies
-      command: bundle install --path vendor/bundle
+      command: |
+        bundle install --path vendor/bundle
+        bundle clean
 
   cache_gems: &cache_gems
     save_cache:
