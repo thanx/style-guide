@@ -10,6 +10,13 @@ Layout/AccessModifierIndentation:
   # But it can be overridden by setting this parameter
   IndentationWidth: ~
 
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+  SupportedStyles:
+    - with_first_parameter
+    - with_fixed_indentation
+  IndentationWidth: ~
+
 # Indentation of `when`.
 Layout/CaseIndentation:
   EnforcedStyle: end
@@ -21,6 +28,11 @@ Layout/CaseIndentation:
   # But it can be overridden by setting this parameter.
   # This only matters if `IndentOneStep` is `true`
   IndentationWidth: ~
+
+# This is generally a good idea, but it breaks a lot of our existing code
+# and isn't worth enforcing in all cases.
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
 
 # Align ends correctly.
 Layout/EndAlignment:
