@@ -10,8 +10,81 @@ Layout/AccessModifierIndentation:
   # But it can be overridden by setting this parameter
   IndentationWidth: ~
 
+# Indentation of `when`.
+Layout/CaseIndentation:
+  EnforcedStyle: end
+  SupportedStyles:
+    - case
+    - end
+  IndentOneStep: false
+  # By default, the indentation width from `Layout/IndentationWidth` is used.
+  # But it can be overridden by setting this parameter.
+  # This only matters if `IndentOneStep` is `true`
+  IndentationWidth: ~
+
+# Align ends correctly.
+Layout/EndAlignment:
+  # The value `keyword` means that `end` should be aligned with the matching
+  # keyword (`if`, `while`, etc.).
+  # The value `variable` means that in assignments, `end` should be aligned
+  # with the start of the variable on the left hand side of `=`. In all other
+  # situations, `end` should still be aligned with the keyword.
+  # The value `start_of_line` means that `end` should be aligned with the start
+  # of the line which the matching keyword appears on.
+  EnforcedStyleAlignWith: variable
+  SupportedStylesAlignWith:
+    - keyword
+    - variable
+    - start_of_line
+  AutoCorrect: false
+  Severity: warning
+
+# Checks the indentation of the first element in an array literal.
+Layout/FirstArrayElementIndentation:
+  # The value `special_inside_parentheses` means that array literals with
+  # brackets that have their opening bracket on the same line as a surrounding
+  # opening round parenthesis, shall have their first element indented relative
+  # to the first position inside the parenthesis.
+  #
+  # The value `consistent` means that the indentation of the first element shall
+  # always be relative to the first position of the line where the opening
+  # bracket is.
+  #
+  # The value `align_brackets` means that the indentation of the first element
+  # shall always be relative to the position of the opening bracket.
+  EnforcedStyle: consistent
+  SupportedStyles:
+    - special_inside_parentheses
+    - consistent
+    - align_brackets
+  # By default, the indentation width from `Layout/IndentationWidth` is used
+  # But it can be overridden by setting this parameter
+  IndentationWidth: ~
+
+# Checks the indentation of the first key in a hash literal.
+Layout/FirstHashElementIndentation:
+  # The value `special_inside_parentheses` means that hash literals with braces
+  # that have their opening brace on the same line as a surrounding opening
+  # round parenthesis, shall have their first key indented relative to the
+  # first position inside the parenthesis.
+  #
+  # The value `consistent` means that the indentation of the first key shall
+  # always be relative to the first position of the line where the opening
+  # brace is.
+  #
+  # The value `align_braces` means that the indentation of the first key shall
+  # always be relative to the position of the opening brace.
+  EnforcedStyle: consistent
+  SupportedStyles:
+    - special_inside_parentheses
+    - consistent
+    - align_braces
+  # By default, the indentation width from `Layout/IndentationWidth` is used
+  # But it can be overridden by setting this parameter
+  IndentationWidth: ~
+
 # Align the elements of a hash literal if they span more than one line.
-Layout/AlignHash:
+Layout/HashAlignment:
   # Alignment of entries using hash rocket as separator. Valid values are:
   #
   # key - left alignment of keys
@@ -45,7 +118,38 @@ Layout/AlignHash:
     - separator
     - table
 
-Layout/AlignParameters:
+Layout/LineLength:
+  Max: 80
+  # To make it possible to copy or click on URIs in the code, we allow lines
+  # containing a URI to be longer than Max.
+  AllowHeredoc: true
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+  # The IgnoreCopDirectives option causes the LineLength rule to ignore cop
+  # directives like '# rubocop: enable ...' when calculating a line's length.
+  IgnoreCopDirectives: false
+  # The IgnoredPatterns option is a list of !ruby/regexp and/or string
+  # elements. Strings will be converted to Regexp objects. A line that matches
+  # any regular expression listed in this option will be ignored by LineLength.
+  IgnoredPatterns: []
+  Exclude:
+    - 'db/migrate/*'
+    - '**/config/**/*'
+    - 'spec/factories.rb'
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+  SupportedStyles:
+    - aligned
+    - indented
+    - indented_relative_to_receiver
+  # By default, the indentation width from Layout/IndentationWidth is used
+  # But it can be overridden by setting this parameter
+  IndentationWidth: ~
+
+Layout/ParameterAlignment:
   # Alignment of parameters in multi-line method calls.
   #
   # The `with_first_parameter` style aligns the following lines along the same
@@ -67,89 +171,6 @@ Layout/AlignParameters:
   # But it can be overridden by setting this parameter
   IndentationWidth: ~
 
-# Indentation of `when`.
-Layout/CaseIndentation:
-  EnforcedStyle: end
-  SupportedStyles:
-    - case
-    - end
-  IndentOneStep: false
-  # By default, the indentation width from `Layout/IndentationWidth` is used.
-  # But it can be overridden by setting this parameter.
-  # This only matters if `IndentOneStep` is `true`
-  IndentationWidth: ~
-
-# Align ends correctly.
-Layout/EndAlignment:
-  # The value `keyword` means that `end` should be aligned with the matching
-  # keyword (`if`, `while`, etc.).
-  # The value `variable` means that in assignments, `end` should be aligned
-  # with the start of the variable on the left hand side of `=`. In all other
-  # situations, `end` should still be aligned with the keyword.
-  # The value `start_of_line` means that `end` should be aligned with the start
-  # of the line which the matching keyword appears on.
-  EnforcedStyleAlignWith: variable
-  SupportedStylesAlignWith:
-    - keyword
-    - variable
-    - start_of_line
-  AutoCorrect: false
-  Severity: warning
-
-# Checks the indentation of the first element in an array literal.
-Layout/IndentFirstArrayElement:
-  # The value `special_inside_parentheses` means that array literals with
-  # brackets that have their opening bracket on the same line as a surrounding
-  # opening round parenthesis, shall have their first element indented relative
-  # to the first position inside the parenthesis.
-  #
-  # The value `consistent` means that the indentation of the first element shall
-  # always be relative to the first position of the line where the opening
-  # bracket is.
-  #
-  # The value `align_brackets` means that the indentation of the first element
-  # shall always be relative to the position of the opening bracket.
-  EnforcedStyle: consistent
-  SupportedStyles:
-    - special_inside_parentheses
-    - consistent
-    - align_brackets
-  # By default, the indentation width from `Layout/IndentationWidth` is used
-  # But it can be overridden by setting this parameter
-  IndentationWidth: ~
-
-# Checks the indentation of the first key in a hash literal.
-Layout/IndentFirstHashElement:
-  # The value `special_inside_parentheses` means that hash literals with braces
-  # that have their opening brace on the same line as a surrounding opening
-  # round parenthesis, shall have their first key indented relative to the
-  # first position inside the parenthesis.
-  #
-  # The value `consistent` means that the indentation of the first key shall
-  # always be relative to the first position of the line where the opening
-  # brace is.
-  #
-  # The value `align_braces` means that the indentation of the first key shall
-  # always be relative to the position of the opening brace.
-  EnforcedStyle: consistent
-  SupportedStyles:
-    - special_inside_parentheses
-    - consistent
-    - align_braces
-  # By default, the indentation width from `Layout/IndentationWidth` is used
-  # But it can be overridden by setting this parameter
-  IndentationWidth: ~
-
-Layout/MultilineMethodCallIndentation:
-  EnforcedStyle: indented
-  SupportedStyles:
-    - aligned
-    - indented
-    - indented_relative_to_receiver
-  # By default, the indentation width from Layout/IndentationWidth is used
-  # But it can be overridden by setting this parameter
-  IndentationWidth: ~
-
 # Checks that the equals signs in parameter default assignments have or don't
 # have surrounding space depending on configuration.
 Layout/SpaceAroundEqualsInParameterDefault:
@@ -160,7 +181,7 @@ Layout/SpaceAroundEqualsInParameterDefault:
 
 #################### Naming ##########################
 
-Naming/UncommunicativeMethodParamName:
+Naming/MethodParameterName:
   # Parameter names may be equal to or greater than this value
   MinNameLength: 3
   AllowNamesEndingInNumbers: true
@@ -262,20 +283,10 @@ Style/BlockDelimiters:
     - expect
   Exclude:
     - 'spec/factories.rb'
-
-Style/BracesAroundHashParameters:
-  EnforcedStyle: context_dependent
-  SupportedStyles:
-    # The `braces` style enforces braces around all method parameters that are
-    # hashes.
-    - braces
-    # The `no_braces` style checks that the last parameter doesn't have braces
-    # around it.
-    - no_braces
-    # The `context_dependent` style checks that the last parameter doesn't have
-    # braces around it, but requires braces if the second to last parameter is
-    # also a hash literal.
-    - context_dependent
+  RequiredBracesMethods:
+    # Require braces for sorbet sigs to reduce noise.
+    # See https://github.com/rubocop-hq/rubocop/pull/7660
+    - 'sig'
 
 Style/ClassAndModuleChildren:
   # Checks the style of children definitions at classes and modules.
@@ -415,27 +426,6 @@ Metrics/ClassLength:
 # Avoid complex methods.
 Metrics/CyclomaticComplexity:
   Max: 10
-
-Metrics/LineLength:
-  Max: 80
-  # To make it possible to copy or click on URIs in the code, we allow lines
-  # containing a URI to be longer than Max.
-  AllowHeredoc: true
-  AllowURI: true
-  URISchemes:
-    - http
-    - https
-  # The IgnoreCopDirectives option causes the LineLength rule to ignore cop
-  # directives like '# rubocop: enable ...' when calculating a line's length.
-  IgnoreCopDirectives: false
-  # The IgnoredPatterns option is a list of !ruby/regexp and/or string
-  # elements. Strings will be converted to Regexp objects. A line that matches
-  # any regular expression listed in this option will be ignored by LineLength.
-  IgnoredPatterns: []
-  Exclude:
-    - 'db/migrate/*'
-    - '**/config/**/*'
-    - 'spec/factories.rb'
 
 Metrics/MethodLength:
   CountComments: false  # count full line comments?
