@@ -283,7 +283,7 @@ Style/BlockDelimiters:
     - expect
   Exclude:
     - 'spec/factories.rb'
-  RequiredBracesMethods:
+  BracesRequiredMethods:
     # Require braces for sorbet sigs to reduce noise.
     # See https://github.com/rubocop-hq/rubocop/pull/7660
     - 'sig'
