@@ -12,6 +12,9 @@ AllCops:
   DefaultFormatter: progress
   DisplayCopNames: true
   ExtraDetails: true
+  # Disable new cops by default since they'll cause noise on version upgrades.
+  # We can always enable them later.
+  NewCops: disable
 
 Rails:
   Enabled: true
