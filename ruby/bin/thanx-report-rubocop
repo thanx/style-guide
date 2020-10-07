@@ -1,5 +1,12 @@
 #!/usr/bin/env ruby
 
+begin
+  require 'danger'
+rescue LoadError
+  puts 'danger is not installed'
+  exit(-1)
+end
+
 system <<~CMD
   bundle exec danger --dangerfile=$(bundle show thanx-style)/.danger/rubocop
 CMD

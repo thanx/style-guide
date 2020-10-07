@@ -1,5 +1,12 @@
 #!/usr/bin/env ruby
 
+begin
+  require 'rubocop'
+rescue LoadError
+  puts 'rubocop is not installed'
+  exit(-1)
+end
+
 formatter = '$(bundle show rubocop-junit-formatter)'
 formatter += '/lib/rubocop/formatter/junit_formatter.rb'
 

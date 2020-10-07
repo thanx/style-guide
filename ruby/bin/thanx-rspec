@@ -1,5 +1,12 @@
 #!/usr/bin/env ruby
 
+begin
+  require 'rspec'
+rescue LoadError
+  puts 'rspec is not installed'
+  exit(-1)
+end
+
 exit system <<~COMMAND
   bundle exec rspec \
     --color \
