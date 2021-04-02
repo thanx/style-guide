@@ -1,7 +1,7 @@
 PATH
   remote: ruby
   specs:
-    thanx-style (0.0.27)
+    thanx-style (0.0.28)
 
 GEM
   remote: https://rubygems.org/
