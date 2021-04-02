@@ -7,12 +7,27 @@
 [![CircleCI](https://circleci.com/gh/thanx/style-guide.svg?style=svg)](https://circleci.com/gh/thanx/style-guide)
 
 ### Owners
-For significant changes, pull requests should get approval from at least one of 
+For significant changes, pull requests should get approval from at least one of
 the following before being merged.
 
 * @drn
 * @marcferna
 * millenniumiguana
+
+## Release
+
+To release changes to the Rubygem that is packaged within this project, first
+[update the version constant](ruby/lib/thanx/style/version.rb) and the
+[Gemfile.lock](Gemfile.lock). Once complete, changes can be released to
+[rubygems.org](https://rubygems.org/) via the following commands:
+
+```
+cd ruby
+./deploy
+```
+
+The `eng@thanx.com` credentials in 1Password in the Eng vault can be used if
+prompted.
 
 ## General Style
 
