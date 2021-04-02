@@ -17,9 +17,9 @@ the following before being merged.
 ## Release
 
 To release changes to the Rubygem that is packaged within this project, first
-[update the version constant](ruby/lib/thanx/style/version.rb) and the
-[Gemfile.lock](Gemfile.lock). Once complete, changes can be released to
-[rubygems.org](https://rubygems.org/) via the following commands:
+[update the version constant](ruby/lib/thanx/style/version.rb), the
+[Gemfile.lock](Gemfile.lock), and create a git tag. Once complete, changes can
+be released to [rubygems.org](https://rubygems.org/) via the following commands:
 
 ```
 cd ruby
