@@ -7,12 +7,11 @@ rescue LoadError
   exit(-1)
 end
 
-formatter = '$(bundle show rubocop-junit-formatter)'
-formatter += '/lib/rubocop/formatter/junit_formatter.rb'
+has_formatter = Gem::Specification.find_all_by_name('rubocop-junit-formatter').any?
 
 exit system <<~COMMAND
   bundle exec rubocop \
-    --require #{formatter} \
+    #{has_formatter ? '--require $(bundle show rubocop-junit-formatter)/lib/rubocop/formatter/junit_formatter.rb' : ''} \
     --format RuboCop::Formatter::JUnitFormatter \
     --out test-results/rubocop/results.xml \
     --format progress \
