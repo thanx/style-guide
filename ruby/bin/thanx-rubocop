@@ -11,9 +11,13 @@ has_formatter = Gem::Specification.find_all_by_name('rubocop-junit-formatter').a
 
 exit system <<~COMMAND
   bundle exec rubocop \
-    #{has_formatter ? '--require $(bundle show rubocop-junit-formatter)/lib/rubocop/formatter/junit_formatter.rb' : ''} \
-    --format RuboCop::Formatter::JUnitFormatter \
-    --out test-results/rubocop/results.xml \
+    #{
+      if has_formatter
+        '--require $(bundle show rubocop-junit-formatter)/lib/rubocop/formatter/junit_formatter.rb ' \
+        '--format RuboCop::Formatter::JUnitFormatter ' \
+        '--out test-results/rubocop/results.xml '
+      end
+    }\
     --format progress \
     #{ARGV.join(' ')}
 COMMAND
