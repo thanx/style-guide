@@ -2,6 +2,6 @@
 
 module Thanx # rubocop:disable Style/ClassAndModuleChildren
   module Style
-    VERSION = '0.0.29'
+    VERSION = '0.0.30'
   end
 end
