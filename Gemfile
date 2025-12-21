@@ -7,6 +7,6 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 gemspec path: 'ruby'
 
 gem 'rspec'
-gem 'rubocop'
-gem 'rubocop-rails'
-gem 'rubocop-rspec'
+gem 'rubocop', '~> 1.82.0'
+gem 'rubocop-rails', '~> 2.34.2'
+gem 'rubocop-rspec', '~> 3.8.0'
