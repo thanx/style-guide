@@ -19,7 +19,7 @@ AllCops:
 Rails:
   Enabled: true
 
-require:
+plugins:
   - rubocop-rspec
   - rubocop-rails
 
