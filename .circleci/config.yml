@@ -4,7 +4,7 @@ references:
   ## Images
 
   docker_ruby: &docker_ruby
-    image: circleci/ruby:2.5.0
+    image: circleci/ruby:2.7.5-node
     environment:
       BUNDLE_JOBS=3
       BUNDLE_RETRY=3
